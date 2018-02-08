@@ -1,3 +1,4 @@
+import java.awt.*;
 // A Point object represents a pair of (x, y) coordinates.
 // Seventh version: Immutable.
 // Class invariant: x >= 0 && y >= 0.
@@ -21,7 +22,11 @@ public class PointMore {
         this.x = x;
         this.y = y;
     }
-
+    
+    public void DrawPoint (Graphics g){
+        g.drawpoint(x, y);
+    }
+    
     // Returns the distance between this Point and (0, 0).
     public double distanceFromOrigin() {
         return Math.sqrt(x * x + y * y);
@@ -37,7 +42,7 @@ public class PointMore {
             return false;
         }
     }
-
+    
     // Returns the x-coordinate of this point.
     public int getX() {
         return x;
